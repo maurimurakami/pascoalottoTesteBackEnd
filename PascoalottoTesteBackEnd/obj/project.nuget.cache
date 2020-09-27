@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KhMd2JnY1p7rB1mP+42xPSnAMy0SH6q7hACZ3m4V1RJy5AyIW0o7n/Sgaz2tk/2pDFJN3LAcr/7sEdRtT3vUFA==",
+  "success": true,
+  "projectFilePath": "D:\\Codes\\pascoalottoTesteBackEnd\\PascoalottoTesteBackEnd\\PascoalottoTesteBackEnd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mauri\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
