@@ -20,39 +20,27 @@ namespace CalculadoraDividas.Models
             try
             {
                 Result result = new Result();
+                result.CalculationDate = DateTime.Now;
+                result.DaysOfDelay = (int)(result.CalculationDate - ExpirationDate).TotalDays;
 
                 if (InterestType.ToLower() == "simples")
                 {
-                    result.CalculationDate = DateTime.Now;
-                    result.DaysOfDelay = (int)(result.CalculationDate - ExpirationDate).TotalDays;
                     result.TotalValue = DebtAmount * (1 + InterestPercentage * result.DaysOfDelay);
-                    result.MonthlyPaymentValue = result.TotalValue / MonthlyPayments;
-                    result.InterestAmount = result.TotalValue - DebtAmount;
-                    result.ComissionAmount = result.TotalValue * ComissionPercentage;
-
-                    return result;
                 }
                 else if (InterestType.ToLower() == "composto")
                 {
-                    result.CalculationDate = DateTime.Now;
-                    result.DaysOfDelay = (int)(result.CalculationDate - ExpirationDate).TotalDays;
                     result.TotalValue = DebtAmount;
-
                     for (int i = 0; i < result.DaysOfDelay; i++)
                     {
                         result.TotalValue = result.TotalValue * (1 + InterestPercentage);
                     }
-
-                    result.MonthlyPaymentValue = result.TotalValue / MonthlyPayments;
-                    result.InterestAmount = result.TotalValue - DebtAmount;
-                    result.ComissionAmount = result.TotalValue * ComissionPercentage;
-
-                    return result;
                 }
-                else
-                {
-                    throw new Exception("Tipo de juros invalido, por favor selecione um valor valido. (Simples ou composto)");
-                }
+
+                result.MonthlyPaymentValue = result.TotalValue / MonthlyPayments;
+                result.InterestAmount = result.TotalValue - DebtAmount;
+                result.ComissionAmount = result.TotalValue * ComissionPercentage;
+
+                return result;
             }
             catch (Exception ex)
             {
