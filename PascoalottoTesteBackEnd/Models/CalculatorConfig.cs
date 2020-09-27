@@ -14,7 +14,6 @@ namespace CalculadoraDividas.Models
         public int MonthlyPayments { get; set; }
         public DateTime ExpirationDate { get; set; }
 
-
         public Result ApplyRules()
         {
             try
@@ -46,6 +45,36 @@ namespace CalculadoraDividas.Models
             {
                 throw ex;
             }
+        }
+
+        public string IsValid()
+        {
+            if (!(InterestPercentage > 0 && InterestPercentage <= 1))
+            {
+                return "Valor de porcentagem de juros(InterestPercentage) invalido. O valor deve ser entre 0-1. Exemplo: 0,002(0,2% ao dia)";
+            }
+            if (InterestType.ToLower() != "simples" && InterestType.ToLower() != "composto")
+            {
+                return "Tipo de juros(InterestType) invalido. Escolha entre 'simples' ou 'composto'";
+            }
+            if (!(ComissionPercentage > 0 && ComissionPercentage <= 1))
+            {
+                return "Valor de porcentagem de comissao(ComissionPercentage) invalido. O valor deve ser entre 0-1. Exemplo: 0,1(10% de comissao)";
+            }
+            if (DebtAmount < 0)
+            {
+                return "Valor de divida(DebtAmount) invalido. Exemplo: 3000 (R$3000,00)";
+            }
+            if (!(MonthlyPayments > 0))
+            {
+                return "Numero de parcelas(MonthlyPayments) esta invalido. Exemplo: 3 (3 parcelas)";
+            }
+            if (ExpirationDate == DateTime.MinValue)
+            {
+                return "Data de vencimento(ExpirationDate) esta invalido. Preencher no formato correto YYYY-MM-DD. Exemplo: 2020-09-17.";
+            }
+
+            return "";
         }
     }
 

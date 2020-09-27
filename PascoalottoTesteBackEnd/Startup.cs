@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace PascoalottoTesteBackEnd
 {
@@ -25,6 +26,14 @@ namespace PascoalottoTesteBackEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Pascoalotto", Version = "v1" });
+                options.IncludeXmlComments("PascoalottoTesteBackEnd.xml");
+            });
+
             services.AddControllers();
         }
 
@@ -35,6 +44,14 @@ namespace PascoalottoTesteBackEnd
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.RoutePrefix = "swagger/ui";
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pascoalotto");
+            });
 
             app.UseHttpsRedirection();
 

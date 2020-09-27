@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PascoalottoTesteBackEnd</name>
+    </assembly>
+    <members>
+        <member name="M:DebtCalculatorController.Controllers.DebtCalculatorController.Calculate(CalculadoraDividas.Models.CalculatorConfig)">
+            <summary>
+                Calculadora de juros
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

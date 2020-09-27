@@ -12,18 +12,32 @@ namespace DebtCalculatorController.Controllers
     [Route("[controller]")]
     public class DebtCalculatorController : ControllerBase
     {
-        public ActionResult Get()
-        {
-            return Ok("Teste do get");
-        }
-
+        /// <summary>
+        ///     Calculadora de juros
+        /// </summary>
+        /// <param name="config"></param>
+        /// <returns></returns>
         [Route("/calculator")]
         [HttpPost()]
-        public ActionResult Calculate([FromBody]CalculatorConfig config)
+        public ActionResult Calculate([FromForm]CalculatorConfig config)
         {
-            Result result = config.ApplyRules();
+            try
+            {
+                string message = config.IsValid();
 
-            return Ok(result);
+                if (!string.IsNullOrEmpty(message))
+                {
+                    return StatusCode(417, message);
+                }
+
+                Result result = config.ApplyRules();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(404, "Houve uma falha no sistema");
+            }
         }
     }
 }

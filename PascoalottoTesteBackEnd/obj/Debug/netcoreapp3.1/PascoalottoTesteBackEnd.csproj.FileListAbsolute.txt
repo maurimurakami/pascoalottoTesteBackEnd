@@ -1,8 +1,6 @@
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.csprojAssemblyReference.cache
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.AssemblyInfoInputs.cache
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.AssemblyInfo.cs
-D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.csproj.CoreCompileInputs.cache
-D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.MvcApplicationPartsAssemblyInfo.cache
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -20,3 +18,11 @@ D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.dll
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.pdb
 D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.genruntimeconfig.cache
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.csproj.CoreCompileInputs.cache
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.MvcApplicationPartsAssemblyInfo.cs
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\obj\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.MvcApplicationPartsAssemblyInfo.cache
+D:\Codes\pascoalottoTesteBackEnd\PascoalottoTesteBackEnd\bin\Debug\netcoreapp3.1\PascoalottoTesteBackEnd.xml
